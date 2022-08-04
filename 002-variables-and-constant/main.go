@@ -19,10 +19,11 @@ func main() {
 	// declaration of multiple variables
 	// Ex 1
 	var (
-		a = 10
-		b = 15
+		a         = 10
+		b         = 15
+		greetings = "hello"
 	)
-	fmt.Println(a, b)
+	fmt.Println(a, b, greetings)
 
 	// Ex 1
 	var d, e int = 1, 2
