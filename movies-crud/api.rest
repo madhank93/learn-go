@@ -1,0 +1,32 @@
+### Get all movies
+GET http://localhost:8080/movies
+
+### Get a movie
+GET http://localhost:8080/movie/001
+
+### Create a movie
+POST http://localhost:8080/movie
+
+{
+  "title": "Seven",
+  "director": {
+    "FirstName": "David",
+    "LastName": "Fincher",
+  }
+}
+
+### Update a movie
+PUT http://localhost:8080/movie/001
+
+content-type: application/json
+
+{
+  "title": "Game",
+  "director": {
+    "FirstName": "David",
+    "LastName": "Fincher",
+  }
+}
+
+### Delete a movie
+DELETE http://localhost:8080/movie/001
