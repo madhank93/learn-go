@@ -1,0 +1,27 @@
+version: "3.8"
+services:
+  db:
+    image: postgres:15.2-alpine3.17
+    container_name: postgresql
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres:/var/lib/postgresql/data
+  adminer:
+    image: dpage/pgadmin4:6.21
+    container_name: pgadmin
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=pgadmin@demo.com
+      - PGADMIN_DEFAULT_PASSWORD=postgres
+    ports:
+      - "8080:80"
+    volumes:
+      - pgadmin:/var/lib/pgadmin
+    depends_on:
+      - db
+volumes:
+  postgres:
+  pgadmin:
