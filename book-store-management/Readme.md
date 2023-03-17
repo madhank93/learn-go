@@ -13,3 +13,5 @@ docker-compose -f docker-compose.pg.yml up
 ```docker
 docker inspect postgresql -f “{{json .NetworkSettings.Networks }}”
 ```
+
+- Recommended to use container name of the postgres in the `Host name/address` connection. In this case `postgresql` and its preferred over hardcoding ip address since its dynamic.

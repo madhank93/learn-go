@@ -8,7 +8,7 @@ import (
 var db *sql.DB
 
 func Connect() {
-	connStr := "postgres://postgres:postgres@localhost/book-store?sslmode=require"
+	connStr := "postgres://postgres:postgres@localhost/book-store?sslmode=disable"
 	d, err := sql.Open("postgres", connStr)
 	if err != nil {
 		log.Fatal(err)
