@@ -1,0 +1,26 @@
+### Get list of books
+GET http://localhost:9000/book
+
+### Get a Book by ID
+GET http://localhost:9000/book/1
+
+### Create a Book
+POST http://localhost:9000/book
+{
+    "name":"Girl with Dragon tatoo",
+    "author": "David fincher",
+    "publication" : "MGM publications",
+    "isbn": 874902302309468
+}
+
+### Update a Book by ID
+PUT http://localhost:9000/book/2
+{
+    "name":"And then there were none",
+    "author": "Agatha",
+    "publication" : "Starch publications",
+    "isbn": 12345
+}
+
+### Delete a Book by ID
+DELETE http://localhost:9000/book/2
