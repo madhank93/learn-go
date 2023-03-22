@@ -20,6 +20,15 @@ type Book struct {
 func init() {
 	config.Connect()
 	db = config.GetDB()
+	createTable()
+}
+
+func createTable() {
+	rows, err := db.Query(`CREATE TABLE IF NOT EXISTS public.books(id serial NOT NULL, name text NOT NULL,author text NOT NULL, publication text NOT NULL,isbn bigint NOT NULL, PRIMARY KEY (id));`)
+	if err != nil {
+		log.Fatalln(err)
+	}
+	defer rows.Close()
 }
 
 func GetAllBooks() []Book {
