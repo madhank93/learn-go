@@ -6,6 +6,7 @@ GET http://localhost:9000/book/1
 
 ### Create a Book
 POST http://localhost:9000/book
+
 {
     "name":"Girl with Dragon tatoo",
     "author": "David fincher",
@@ -14,7 +15,8 @@ POST http://localhost:9000/book
 }
 
 ### Update a Book by ID
-PUT http://localhost:9000/book/2
+PUT http://localhost:9000/book/1
+
 {
     "name":"And then there were none",
     "author": "Agatha",
