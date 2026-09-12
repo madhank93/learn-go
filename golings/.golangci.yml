@@ -1,0 +1,17 @@
+# golangci-lint config (v1.x schema). Run via `mise run lint`.
+# Keeps idiomatic-Go pressure on while learning — clippy-style parity.
+
+issues:
+  # golings ships intentionally-broken fixtures used by its own runner tests.
+  exclude-dirs:
+    - golings/fixtures
+
+linters:
+  enable:
+    - errcheck      # unchecked errors
+    - govet         # suspicious constructs
+    - staticcheck   # broad correctness/idiom checks
+    - ineffassign   # unused assignments
+    - unused        # unused code
+    - gofmt         # formatting
+    - goimports     # import grouping/ordering

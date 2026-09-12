@@ -1,0 +1,29 @@
+// strings2
+// A Go string is bytes, not characters. len(s) counts BYTES; one multibyte
+// UTF-8 character (like é or 世) is several bytes. Count runes instead.
+
+package main_test
+
+import (
+	"testing"
+	"unicode/utf8"
+)
+
+// charCount returns the number of characters (runes) in s, not bytes.
+func charCount(s string) int {
+	// FIXME: count runes, not bytes — unicode/utf8 has a helper for that.
+	count := utf8.RuneCountInString(s)
+	return count
+}
+
+func TestCharCount(t *testing.T) {
+	if got := charCount("hello"); got != 5 {
+		t.Errorf("ascii: want 5, got %d", got)
+	}
+	if got := charCount("héllo"); got != 5 { // é is 2 bytes
+		t.Errorf("accented: want 5, got %d", got)
+	}
+	if got := charCount("世界"); got != 2 { // each rune is 3 bytes
+		t.Errorf("cjk: want 2, got %d", got)
+	}
+}

@@ -1,0 +1,1557 @@
+[[exercises]]
+name = "variables1"
+path = "exercises/variables/variables1/main.go"
+mode = "compile"
+hint = """
+Variables must have names."""
+
+[[exercises]]
+name = "variables2"
+path = "exercises/variables/variables2/main.go"
+mode = "compile"
+hint = """
+It is missing a symbol used to declare and initialize variables."""
+
+[[exercises]]
+name = "variables3"
+path = "exercises/variables/variables3/main.go"
+mode = "compile"
+hint = """
+Could it be missing the variable type?"""
+
+[[exercises]]
+name = "variables4"
+path = "exercises/variables/variables4/main.go"
+mode = "compile"
+hint = """
+Variables can be redeclared in new blocks, but it is missing something. What is it?"""
+
+[[exercises]]
+name = "variables5"
+path = "exercises/variables/variables5/main.go"
+mode = "compile"
+hint = """
+Constants need initialization."""
+
+[[exercises]]
+name = "variables6"
+path = "exercises/variables/variables6/main.go"
+mode = "compile"
+hint = """
+Constants can't be changed."""
+
+[[exercises]]
+name = "primitive_types1"
+path = "exercises/primitive_types/primitive_types1/main_test.go"
+mode = "test"
+hint = "Assign storeIsOpen a new value (false) so the store ends up closed."
+
+[[exercises]]
+name = "primitive_types2"
+path = "exercises/primitive_types/primitive_types2/main.go"
+mode = "compile"
+hint = "Make sure 'who' is declared and assigned a value before using it."
+
+[[exercises]]
+name = "primitive_types3"
+path = "exercises/primitive_types/primitive_types3/main.go"
+mode = "compile"
+hint = "fmt.Printf() can take multiple variables as parameters. Try declaring those variables."
+
+[[exercises]]
+name = "primitive_types4"
+path = "exercises/primitive_types/primitive_types4/main.go"
+mode = "compile"
+hint = """
+byte can hold values from 0 to 255. Could it store a character?"""
+
+[[exercises]]
+name = "primitive_types5"
+path = "exercises/primitive_types/primitive_types5/main.go"
+mode = "compile"
+hint = """
+These names seem misleading, no? But they are close to being correct.
+Check this documentation to understand the variety of
+numeric data types: https://go.dev/ref/spec#Numeric_types"""
+
+[[exercises]]
+name = "if1"
+path = "exercises/if/if1/main_test.go"
+mode = "test"
+hint = "Use an if statement to compare a and b, and return the larger number."
+
+[[exercises]]
+name = "if2"
+path = "exercises/if/if2/main_test.go"
+mode = "test"
+hint = "Implement fooIfFizz function by using if and else statements."
+
+[[exercises]]
+name = "switch1"
+path = "exercises/switch/switch1/main.go"
+mode = "compile"
+hint = """
+Switch flow is missing a variable to evaluate the statement."""
+
+[[exercises]]
+name = "switch2"
+path = "exercises/switch/switch2/main.go"
+mode = "compile"
+hint = """
+Switch without a condition is possible, but that case statement needs a boolean evaluation."""
+
+[[exercises]]
+name = "switch3"
+path = "exercises/switch/switch3/main_test.go"
+mode = "test"
+hint = "Ensure that each case statement in a switch block has a condition."
+
+[[exercises]]
+name = "functions1"
+path = "exercises/functions/functions1/main.go"
+mode = "compile"
+hint = """
+The main function is calling another function that it expects to exist.
+It expects a function named `call_me` to exist and receive no arguments."""
+
+[[exercises]]
+name = "functions2"
+path = "exercises/functions/functions2/main.go"
+mode = "compile"
+hint = """
+Function parameters need to have their types explicitly declared."""
+
+[[exercises]]
+name = "functions3"
+path = "exercises/functions/functions3/main.go"
+mode = "compile"
+hint = """
+When a function expects arguments, you must pass values to them."""
+
+[[exercises]]
+name = "functions4"
+path = "exercises/functions/functions4/main.go"
+mode = "compile"
+hint = """
+Functions that return values must have return types declared in the function signature."""
+
+[[exercises]]
+name = "morefn1"
+path = "exercises/more_functions/morefn1/main_test.go"
+mode = "test"
+hint = """
+Recurse with a base case:
+
+if n <= 1 { return 1 }
+return n * factorial(n-1)
+"""
+
+[[exercises]]
+name = "morefn2"
+path = "exercises/more_functions/morefn2/main_test.go"
+mode = "test"
+hint = """
+A variadic parameter is a slice inside the function:
+
+for _, n := range nums { total += n }
+"""
+
+[[exercises]]
+name = "strings1"
+path = "exercises/strings/strings1/main_test.go"
+mode = "test"
+hint = """
+Chain two strings helpers:
+
+return strings.ReplaceAll(strings.ToLower(s), " ", "-")
+"""
+
+[[exercises]]
+name = "strings2"
+path = "exercises/strings/strings2/main_test.go"
+mode = "test"
+hint = """
+len counts bytes; count runes instead:
+
+return utf8.RuneCountInString(s)
+"""
+
+[[exercises]]
+name = "arrays1"
+path = "exercises/arrays/arrays1/main_test.go"
+mode = "test"
+hint = """
+Arrays use zero-based indexing."""
+
+[[exercises]]
+name = "arrays2"
+path = "exercises/arrays/arrays2/main.go"
+mode = "compile"
+hint = """
+Unlike languages like Python or Ruby, Go does not allow arrays with mixed data types."""
+
+[[exercises]]
+name = "slices1"
+path = "exercises/slices/slices1/main.go"
+mode = "compile"
+hint = """
+Slices can be created with the `make` function and must have a specified type."""
+
+[[exercises]]
+name = "slices2"
+path = "exercises/slices/slices2/main_test.go"
+mode = "test"
+hint = """
+Slices can be created from arrays using the [low:high] syntax."""
+
+[[exercises]]
+name = "slices3"
+path = "exercises/slices/slices3/main_test.go"
+mode = "test"
+hint = """
+Use the `append` function to add elements to an existing slice.
+Check the output after adding some elements.
+
+For more on the `append` function, refer to: https://go.dev/ref/spec#Appending_and_copying_slices"""
+
+[[exercises]]
+name = "slices4"
+path = "exercises/slices/slices4/main_test.go"
+mode = "test"
+hint = """
+Check the slice indices to ensure they fall within the bounds of the names slice.
+
+For more information: https://go.dev/ref/spec#Appending_and_copying_slices"""
+
+[[exercises]]
+name = "maps1"
+path = "exercises/maps/maps1/main.go"
+mode = "compile"
+hint = """
+Maps have types for both keys and values.
+
+Define these types to make the code compile.
+
+Indexing in maps is similar to setting values.
+
+Check the spec for more info: https://go.dev/ref/spec#Map_types"""
+
+[[exercises]]
+name = "maps2"
+path = "exercises/maps/maps2/main_test.go"
+mode = "test"
+hint = """
+Similar to `maps1`, but you can initialize a new map in the same line using a different syntax."""
+
+[[exercises]]
+name = "maps3"
+path = "exercises/maps/maps3/main_test.go"
+mode = "test"
+hint = """
+Verify that the keys used to access map values match the keys defined in the phoneBook map."""
+
+[[exercises]]
+name = "range1"
+path = "exercises/range/range1/main.go"
+mode = "compile"
+hint = """
+Use the `range` keyword to iterate over collections like arrays, slices, and maps."""
+
+[[exercises]]
+name = "range2"
+path = "exercises/range/range2/main.go"
+mode = "compile"
+hint = """
+Use the `range` keyword to iterate over map values. Unlike arrays and slices, maps are iterated over by keys and values."""
+
+[[exercises]]
+name = "range3"
+path = "exercises/range/range3/main_test.go"
+mode = "test"
+hint = """
+Use a `for` loop with `range` to check if each number is even and append it to the `evenNumbers` slice."""
+
+[[exercises]]
+name = "structs1"
+path = "exercises/structs/structs1/main_test.go"
+mode = "test"
+hint = """
+Structs are created using the `type structName struct {}` syntax.
+Fields inside the brackets must have their types declared along with their names."""
+
+[[exercises]]
+name = "structs2"
+path = "exercises/structs/structs2/main_test.go"
+mode = "test"
+hint = """
+Embedding a struct is done using just the struct name.
+
+After embedding, fields can be accessed directly through the base struct without specifying the full path, but you can if needed."""
+
+[[exercises]]
+name = "structs3"
+path = "exercises/structs/structs3/main_test.go"
+mode = "test"
+hint = """
+Add a function to a struct by defining it as follows:
+
+func (s *StructHere) doSomething() {
+
+}
+"""
+
+[[exercises]]
+name = "pointers1"
+path = "exercises/pointers/pointers1/main_test.go"
+mode = "test"
+hint = """
+Dereference with * to write through the pointer:
+
+*p = *p * 2
+"""
+
+[[exercises]]
+name = "pointers2"
+path = "exercises/pointers/pointers2/main_test.go"
+mode = "test"
+hint = """
+Go auto-dereferences a struct pointer for field access:
+
+a.Balance += amount
+"""
+
+[[exercises]]
+name = "pointers3"
+path = "exercises/pointers/pointers3/main_test.go"
+mode = "test"
+hint = """
+Increment the field through the pointer receiver:
+
+c.N++
+"""
+
+[[exercises]]
+name = "methods1"
+path = "exercises/methods/methods1/main_test.go"
+mode = "test"
+hint = """
+Value receiver reads; pointer receiver mutates:
+
+func (r Rectangle) Area() float64 { return r.Width * r.Height }
+func (r *Rectangle) Scale(f float64) { r.Width *= f; r.Height *= f }
+"""
+
+[[exercises]]
+name = "methods2"
+path = "exercises/methods/methods2/main_test.go"
+mode = "test"
+hint = """
+Convert the named type to its underlying type for arithmetic:
+
+return float64(c)*9/5 + 32
+"""
+
+[[exercises]]
+name = "interfaces1"
+path = "exercises/interfaces/interfaces1/main_test.go"
+mode = "test"
+hint = """
+Add an Area method to each type — no implements keyword needed:
+
+func (r Rectangle) Area() float64 { return r.W * r.H }
+func (c Circle) Area() float64    { return math.Pi * c.R * c.R }
+"""
+
+[[exercises]]
+name = "interfaces2"
+path = "exercises/interfaces/interfaces2/main_test.go"
+mode = "test"
+hint = """
+Implement String() string to satisfy fmt.Stringer:
+
+func (p Point) String() string { return fmt.Sprintf("(%d, %d)", p.X, p.Y) }
+"""
+
+[[exercises]]
+name = "interfaces3"
+path = "exercises/interfaces/interfaces3/main_test.go"
+mode = "test"
+hint = """
+Type switch extracts the concrete type (import "fmt"):
+
+switch x := v.(type) {
+case int:    return fmt.Sprintf("int: %d", x)
+case string: return fmt.Sprintf("string: %s", x)
+default:     return "unknown"
+}
+"""
+
+[[exercises]]
+name = "interfaces4"
+path = "exercises/interfaces/interfaces4/main_test.go"
+mode = "test"
+hint = """
+Implement both methods on *Buffer to satisfy the embedded interface:
+
+func (b *Buffer) Read() string   { return b.data }
+func (b *Buffer) Write(s string) { b.data += s }
+"""
+
+[[exercises]]
+name = "enums1"
+path = "exercises/enums/enums1/main_test.go"
+mode = "test"
+hint = """
+After the first iota line, list the rest and iota increments automatically:
+
+const ( Sunday Weekday = iota; Monday; Tuesday; Wednesday; Thursday; Friday; Saturday )
+"""
+
+[[exercises]]
+name = "enums2"
+path = "exercises/enums/enums2/main_test.go"
+mode = "test"
+hint = """
+Switch on the receiver:
+
+switch c { case Red: return "Red"; case Green: return "Green"; case Blue: return "Blue"; default: return "Unknown" }
+"""
+
+[[exercises]]
+name = "anonymous_functions1"
+path = "exercises/anonymous_functions/anonymous_functions1/main.go"
+mode = "compile"
+hint = """
+The function needs a string to print."""
+
+[[exercises]]
+name = "anonymous_functions2"
+path = "exercises/anonymous_functions/anonymous_functions2/main.go"
+mode = "compile"
+hint = """
+You should call the function with a parameter."""
+
+[[exercises]]
+name = "anonymous_functions3"
+path = "exercises/anonymous_functions/anonymous_functions3/main.go"
+mode = "compile"
+hint = """
+1 - The `updateStatus()` function should return an order status index like `orderStatus[index]`.
+2 - You may need to call `anonymous_func` once more."""
+
+[[exercises]]
+name = "defer1"
+path = "exercises/defer/defer1/main_test.go"
+mode = "test"
+hint = """
+Defers run LIFO. With a named return seq, deferred appends mutate it:
+
+defer func() { seq = append(seq, 1) }()
+defer func() { seq = append(seq, 2) }()
+defer func() { seq = append(seq, 3) }()  // runs first -> [3,2,1]
+"""
+
+[[exercises]]
+name = "defer2"
+path = "exercises/defer/defer2/main_test.go"
+mode = "test"
+hint = """
+Defer the cleanup at the top so it runs on every return:
+
+defer r.Close()
+"""
+
+[[exercises]]
+name = "errors1"
+path = "exercises/errors/errors1/main_test.go"
+mode = "test"
+hint = """
+Errors are values. Return them, do not throw them.
+
+Import "errors" and return errors.New("...") when b == 0.
+Check the result at the call site with `if err != nil`.
+"""
+
+[[exercises]]
+name = "errors2"
+path = "exercises/errors/errors2/main_test.go"
+mode = "test"
+hint = """
+The %w verb wraps an error so errors.Is can unwrap and match it.
+
+fmt.Errorf("lookup %q: %w", id, ErrNotFound)
+"""
+
+[[exercises]]
+name = "errors3"
+path = "exercises/errors/errors3/main_test.go"
+mode = "test"
+hint = """
+Any type with an Error() string method satisfies the error interface.
+
+Build the message from e.Field, e.g. fmt.Sprintf("%s is required", e.Field).
+errors.As walks the wrap chain to find a *ValidationError.
+"""
+
+[[exercises]]
+name = "errors4"
+path = "exercises/errors/errors4/main_test.go"
+mode = "test"
+hint = """
+recover() only works inside a deferred function.
+
+defer func() { if r := recover(); r != nil { err = fmt.Errorf("recovered: %v", r) } }()
+A named return value (err) can be set from inside the deferred func.
+"""
+
+[[exercises]]
+name = "errors5"
+path = "exercises/errors/errors5/main_test.go"
+mode = "test"
+hint = """
+errors.Join bundles many errors; errors.Is matches any of them:
+
+return errors.Join(errs...)
+"""
+
+[[exercises]]
+name = "errors6"
+path = "exercises/errors/errors6/main_test.go"
+mode = "test"
+hint = """
+errors.Is walks the whole wrap chain, but only through %w links. %v flattens the
+error to text and breaks the chain — change the middle Errorf to use %w.
+"""
+
+[[exercises]]
+name = "generics1"
+path = "exercises/generics/generics1/main.go"
+mode = "compile"
+hint = """
+Generic functions prevent code duplication by allowing the same function to handle different types.
+
+Types are defined using syntax like:
+
+func FuncName[T any](value T) {
+
+}
+"""
+
+[[exercises]]
+name = "generics2"
+path = "exercises/generics/generics2/main_test.go"
+mode = "test"
+hint = """
+Type mismatches in arithmetic operations are not allowed, but generics enable functions to handle different types while maintaining the same logic.
+
+In Go, type constraints can be declared. For this exercise, the `Number` interface is an example.
+
+Ensure you include the appropriate type signature.
+"""
+
+[[exercises]]
+name = "generics3"
+path = "exercises/generics/generics3/main_test.go"
+mode = "test"
+hint = """
+Push appends; Pop guards the empty case:
+
+func (s *Stack[T]) Push(x T) { s.items = append(s.items, x) }
+// Pop: if len(s.items)==0 return zero,false; else take the last, shrink, return it,true"""
+
+[[exercises]]
+name = "generics4"
+path = "exercises/generics/generics4/main_test.go"
+mode = "test"
+hint = """
+Fold left over the slice:
+
+acc := init
+for _, item := range items { acc = f(acc, item) }
+return acc"""
+
+[[exercises]]
+name = "modern1"
+path = "exercises/modern/modern1/main_test.go"
+mode = "test"
+hint = """
+Use the Go 1.21 builtins (no import):
+
+lo = min(a, b, c)
+hi = max(a, b, c)
+clear(m)
+"""
+
+[[exercises]]
+name = "modern2"
+path = "exercises/modern/modern2/main_test.go"
+mode = "test"
+hint = """
+Go 1.22 lets you range over an int:
+
+for i := range n { total += i }
+"""
+
+[[exercises]]
+name = "modern3"
+path = "exercises/modern/modern3/main_test.go"
+mode = "test"
+hint = """
+Call yield for each value; stop early if it returns false:
+
+for i := 1; i <= n; i++ { if !yield(i) { return } }
+"""
+
+[[exercises]]
+name = "modern4"
+path = "exercises/modern/modern4/main_test.go"
+mode = "test"
+hint = """
+Go 1.25: wg.Go(f) does Add(1) + go + defer Done() for you. Replace the bare
+`go func(){...}()` with wg.Go(func() { total.Add(int64(n)) }).
+"""
+
+[[exercises]]
+name = "modern5"
+path = "exercises/modern/modern5/main_test.go"
+mode = "test"
+hint = """
+Per-iteration variables only apply when the LOOP declares the variable. Drop the
+hoisted `var item string` and let the range clause declare it:
+
+for _, item := range items {
+"""
+
+[[exercises]]
+name = "di1"
+path = "exercises/dependency_injection/di1/main_test.go"
+mode = "test"
+hint = """
+fmt.Fprintf writes formatted output to any io.Writer:
+
+fmt.Fprintf(w, "Hello, %s!", name)"""
+
+[[exercises]]
+name = "di2"
+path = "exercises/dependency_injection/di2/main_test.go"
+mode = "test"
+hint = """
+Read the hour with c.Now().Hour() and branch on whether it is < 12."""
+
+[[exercises]]
+name = "di3"
+path = "exercises/dependency_injection/di3/main_test.go"
+mode = "test"
+hint = """
+Delegate to the injected store, then build the greeting:
+
+g.store.Save(name)
+return "Hi, " + name"""
+
+[[exercises]]
+name = "mock1"
+path = "exercises/mocking/mock1/main_test.go"
+mode = "test"
+hint = """
+Only notify when temp is greater than threshold:
+
+if temp > threshold { n.Notify("too hot") }"""
+
+[[exercises]]
+name = "mock2"
+path = "exercises/mocking/mock2/main_test.go"
+mode = "test"
+hint = """
+Fetch returns (string, error). Check the error first:
+
+name, err := f.Fetch(id)
+if err != nil { return "Welcome, guest!" }
+return "Welcome, " + name + "!\""""
+
+[[exercises]]
+name = "concurrent1"
+path = "exercises/concurrent/concurrent1/main_test.go"
+mode = "test"
+hint = """
+We have multiple printers (though these may also be non-functional).
+
+Our goal is to print something, but what exactly should be printed?
+"""
+
+[[exercises]]
+name = "concurrent2"
+path = "exercises/concurrent/concurrent2/main_test.go"
+mode = "test"
+hint = """
+Updating a variable from multiple goroutines can lead to a data race. A data race occurs when multiple goroutines read and write the same variable simultaneously without proper synchronization.
+
+Consider a counter as an example: concurrent updates can lead to unexpected results.
+
+Learn more about mutexes to handle this issue: https://pkg.go.dev/sync#Mutex.
+"""
+
+[[exercises]]
+name = "concurrent3"
+path = "exercises/concurrent/concurrent3/main_test.go"
+mode = "test"
+hint = """
+Writing messages to closed channels will cause a panic.
+
+To prevent panics, avoid sending messages to channels that have been closed.
+
+Note: Channels can be iterated using `for-range` loops.
+"""
+
+[[exercises]]
+name = "channels1"
+path = "exercises/channels/channels1/main_test.go"
+mode = "test"
+hint = """
+Give the channel a buffer so sends do not block:
+
+ch := make(chan int, len(vals))
+"""
+
+[[exercises]]
+name = "channels2"
+path = "exercises/channels/channels2/main_test.go"
+mode = "test"
+hint = """
+Drain the receive-only channel with range:
+
+for v := range in { got = append(got, v) }
+"""
+
+[[exercises]]
+name = "select1"
+path = "exercises/select/select1/main_test.go"
+mode = "test"
+hint = """
+select chooses whichever case can proceed:
+
+select {
+case v := <-a: return v
+case v := <-b: return v
+}
+"""
+
+[[exercises]]
+name = "select2"
+path = "exercises/select/select2/main_test.go"
+mode = "test"
+hint = """
+time.After(d) returns a channel that fires after d. Race it:
+
+select {
+case v := <-ch: return v, true
+case <-time.After(d): return 0, false
+}
+"""
+
+[[exercises]]
+name = "select3"
+path = "exercises/select/select3/main_test.go"
+mode = "test"
+hint = """
+A default case runs when no other case is ready, so select never blocks:
+
+select {
+case v := <-ch: return v, true
+default: return 0, false
+}
+"""
+
+[[exercises]]
+name = "sync1"
+path = "exercises/sync/sync1/main_test.go"
+mode = "test"
+hint = """
+Guard the critical section:
+
+c.mu.Lock()
+defer c.mu.Unlock()
+c.n++
+"""
+
+[[exercises]]
+name = "sync2"
+path = "exercises/sync/sync2/main_test.go"
+mode = "test"
+hint = """
+sync.Once.Do runs its function only the first time it is called:
+
+c.once.Do(func() { c.loads++ })
+"""
+
+[[exercises]]
+name = "sync3"
+path = "exercises/sync/sync3/main_test.go"
+mode = "test"
+hint = """
+Increment without a lock using an atomic operation:
+
+atomic.AddInt64(&hits, 1)
+"""
+
+[[exercises]]
+name = "context1"
+path = "exercises/context/context1/main_test.go"
+mode = "test"
+hint = """
+A select can wait on multiple channels at once.
+
+Add `case <-ctx.Done(): return count` so the loop exits when cancelled.
+"""
+
+[[exercises]]
+name = "context2"
+path = "exercises/context/context2/main_test.go"
+mode = "test"
+hint = """
+Race the work against the context using select:
+
+select {
+case <-time.After(d): return nil
+case <-ctx.Done(): return ctx.Err()
+}
+"""
+
+[[exercises]]
+name = "context3"
+path = "exercises/context/context3/main_test.go"
+mode = "test"
+hint = """
+ctx.Value returns interface{}. Use the comma-ok type assertion:
+
+if u, ok := ctx.Value(userKey).(string); ok { return u }
+return "anonymous"
+"""
+
+[[exercises]]
+name = "concpat1"
+path = "exercises/concurrency_patterns/concpat1/main_test.go"
+mode = "test"
+hint = """
+A worker drains its jobs channel until it is closed:
+
+for n := range jobs {
+    results <- n * n
+}
+"""
+
+[[exercises]]
+name = "concpat2"
+path = "exercises/concurrency_patterns/concpat2/main_test.go"
+mode = "test"
+hint = """
+One goroutine per input copies into out; a closer waits for them all:
+
+for _, c := range chans {
+    wg.Add(1)
+    go func(c <-chan int) { defer wg.Done(); for v := range c { out <- v } }(c)
+}
+go func() { wg.Wait(); close(out) }()
+"""
+
+[[exercises]]
+name = "concpat3"
+path = "exercises/concurrency_patterns/concpat3/main_test.go"
+mode = "test"
+hint = """
+Transform each value, then close out after the input is drained:
+
+for n := range in {
+    out <- n * 2
+}
+close(out)
+"""
+
+[[exercises]]
+name = "stdlib1"
+path = "exercises/stdlib_essentials/stdlib1/main_test.go"
+mode = "test"
+hint = """
+Struct tags map JSON keys to fields:
+
+Name string `json:"full_name"`
+Age  int    `json:"user_age"`
+"""
+
+[[exercises]]
+name = "stdlib2"
+path = "exercises/stdlib_essentials/stdlib2/main_test.go"
+mode = "test"
+hint = """
+io.Copy streams a Reader into a Writer:
+
+if _, err := io.Copy(&buf, r); err != nil { return "", err }
+"""
+
+[[exercises]]
+name = "stdlib3"
+path = "exercises/stdlib_essentials/stdlib3/main_test.go"
+mode = "test"
+hint = """
+Sort ascending then reverse:
+
+slices.Sort(out)
+slices.Reverse(out)
+"""
+
+[[exercises]]
+name = "stdlib4"
+path = "exercises/stdlib_essentials/stdlib4/main_test.go"
+mode = "test"
+hint = """
+The layout string IS the reference date Mon Jan 2 2006:
+
+return time.Parse("2006-01-02", s)
+"""
+
+[[exercises]]
+name = "stdlib5"
+path = "exercises/stdlib_essentials/stdlib5/main_test.go"
+mode = "test"
+hint = """
+strconv.Atoi parses a base-10 int:
+
+n, err := strconv.Atoi(s); if err != nil { return 0, err }; return n*2, nil
+"""
+
+[[exercises]]
+name = "stdlib6"
+path = "exercises/stdlib_essentials/stdlib6/main_test.go"
+mode = "test"
+hint = """
+Compile once, then match:
+
+re := regexp.MustCompile(`^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$`)
+return re.MatchString(s)
+"""
+
+[[exercises]]
+name = "stdlib7"
+path = "exercises/stdlib_essentials/stdlib7/main_test.go"
+mode = "test"
+hint = """
+omitempty cannot see inside a struct. Go 1.24's omitzero asks the type (here
+time.Time's IsZero method) instead:
+
+At time.Time `json:"at,omitzero"`
+"""
+
+[[exercises]]
+name = "reflect1"
+path = "exercises/reflection/reflect1/main_test.go"
+mode = "test"
+hint = """
+TypeOf gives a reflect.Type; Kind() names the underlying kind:
+
+return reflect.TypeOf(x).Kind().String()"""
+
+[[exercises]]
+name = "reflect2"
+path = "exercises/reflection/reflect2/main_test.go"
+mode = "test"
+hint = """
+Iterate the struct's fields and act on the string ones:
+
+v := reflect.ValueOf(x)
+for i := 0; i < v.NumField(); i++ {
+    if v.Field(i).Kind() == reflect.String { fn(v.Field(i).String()) }
+}"""
+
+[[exercises]]
+name = "files1"
+path = "exercises/files/files1/main_test.go"
+mode = "test"
+hint = """
+Whole-file I/O:
+
+os.WriteFile(path, []byte(content), 0o644)
+data, err := os.ReadFile(path); return string(data), err
+"""
+
+[[exercises]]
+name = "files2"
+path = "exercises/files/files2/main_test.go"
+mode = "test"
+hint = """
+Scan advances one line per call:
+
+for scanner.Scan() { n++ }
+"""
+
+[[exercises]]
+name = "http1"
+path = "exercises/http_client/http1/main_test.go"
+mode = "test"
+hint = """
+GET, close the body, read it:
+
+resp, err := http.Get(url); if err != nil { return "", err }
+defer resp.Body.Close()
+body, err := io.ReadAll(resp.Body); return string(body), err
+"""
+
+[[exercises]]
+name = "httpsrv1"
+path = "exercises/http_server/httpsrv1/main_test.go"
+mode = "test"
+hint = """
+Read the query parameter and default it, then write the greeting:
+
+name := r.URL.Query().Get("name")
+if name == "" { name = "world" }
+fmt.Fprintf(w, "Hello, %s!", name)"""
+
+[[exercises]]
+name = "httpsrv2"
+path = "exercises/http_server/httpsrv2/main_test.go"
+mode = "test"
+hint = """
+Register the method+path pattern, and read the wildcard with PathValue:
+
+mux.HandleFunc("GET /users/{id}", userHandler)
+// inside userHandler:
+fmt.Fprintf(w, "user %s", r.PathValue("id"))"""
+
+[[exercises]]
+name = "httpsrv3"
+path = "exercises/http_server/httpsrv3/main_test.go"
+mode = "test"
+hint = """
+Decode, set the header, encode:
+
+var req echoReq
+json.NewDecoder(r.Body).Decode(&req)
+w.Header().Set("Content-Type", "application/json")
+json.NewEncoder(w).Encode(echoResp{Greeting: "Hello, " + req.Name + "!"})"""
+
+[[exercises]]
+name = "httpsrv4"
+path = "exercises/http_server/httpsrv4/main_test.go"
+mode = "test"
+hint = """
+Set the header, then call the next handler so the chain continues:
+
+w.Header().Set("X-App", value)
+next.ServeHTTP(w, r)"""
+
+[[exercises]]
+name = "cli1"
+path = "exercises/cli/cli1/main_test.go"
+mode = "test"
+hint = """
+fs.String/fs.Int return pointers; parse, then dereference:
+
+name := fs.String("name", "world", "")
+count := fs.Int("count", 1, "")
+fs.Parse(args)
+return *name, *count"""
+
+[[exercises]]
+name = "cli2"
+path = "exercises/cli/cli2/main_test.go"
+mode = "test"
+hint = """
+Parse, then read the first leftover positional:
+
+fs.Parse(args)
+return fs.Arg(0)"""
+
+[[exercises]]
+name = "testadv1"
+path = "exercises/testing_advanced/testadv1/main_test.go"
+mode = "test"
+hint = """
+Check divisibility by 15 first, then 3, then 5, else strconv.Itoa(n):
+
+switch {
+case n%15 == 0: return "FizzBuzz"
+case n%3 == 0: return "Fizz"
+case n%5 == 0: return "Buzz"
+default: return strconv.Itoa(n)
+}
+"""
+
+[[exercises]]
+name = "testadv2"
+path = "exercises/testing_advanced/testadv2/main_test.go"
+mode = "test"
+hint = """
+Reverse by runes, not bytes:
+
+r := []rune(s)
+for i, j := 0, len(r)-1; i < j; i, j = i+1, j-1 { r[i], r[j] = r[j], r[i] }
+return string(r)
+"""
+
+[[exercises]]
+name = "testadv3"
+path = "exercises/testing_advanced/testadv3/main_test.go"
+mode = "test"
+hint = """
+Write the body to the ResponseWriter and check the error:
+
+if _, err := w.Write([]byte("pong")); err != nil {
+    http.Error(w, err.Error(), http.StatusInternalServerError)
+}
+"""
+
+[[exercises]]
+name = "testadv4"
+path = "exercises/testing_advanced/testadv4/main_test.go"
+mode = "test"
+hint = """
+Implement the sum; the benchmark uses b.Loop():
+
+total := 0; for _, n := range nums { total += n }; return total
+"""
+
+[[exercises]]
+name = "applied1"
+path = "exercises/applied/applied1/main_test.go"
+mode = "test"
+hint = """
+Implement the remaining sort.Interface methods:
+
+func (a ByAge) Less(i, j int) bool { return a[i].Age < a[j].Age }
+func (a ByAge) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
+"""
+
+[[exercises]]
+name = "applied2"
+path = "exercises/applied/applied2/main_test.go"
+mode = "test"
+hint = """
+Guard the write like the read does:
+
+s.mu.Lock()
+defer s.mu.Unlock()
+s.m[key] = v
+"""
+
+# ── type_aliases ──────────────────────────────────────────────────────────────
+[[exercises]]
+name = "typealias1"
+path = "exercises/type_aliases/typealias1/main.go"
+mode = "compile"
+hint = """
+type Celsius float64 is a distinct type. To pass it to a func taking float64,
+convert explicitly at the call site: toFahrenheit(float64(boiling)).
+"""
+
+[[exercises]]
+name = "typealias2"
+path = "exercises/type_aliases/typealias2/main_test.go"
+mode = "test"
+hint = """
+Add a method: func (c Celsius) String() string { return fmt.Sprintf("%g°C", float64(c)) }
+Use float64(c) inside — fmt.Sprint(c) would recurse.
+"""
+
+[[exercises]]
+name = "typealias3"
+path = "exercises/type_aliases/typealias3/main_test.go"
+mode = "test"
+hint = """
+Write `type MyByte = byte` (with the =). That makes MyByte a true alias — the
+same type as byte — so it passes to asByte with no conversion.
+"""
+
+# ── iterators ─────────────────────────────────────────────────────────────────
+[[exercises]]
+name = "iter1"
+path = "exercises/iterators/iter1/main_test.go"
+mode = "test"
+hint = """
+Only forward values that pass the predicate:
+
+if keep(v) { if !yield(v) { return } }
+"""
+
+[[exercises]]
+name = "iter2"
+path = "exercises/iterators/iter2/main_test.go"
+mode = "test"
+hint = """
+iter.Seq2[K, V] yields (K, V) pairs. For Enumerate the key is the index and the
+value is the element: yield(i, v), not yield(v, i).
+"""
+
+[[exercises]]
+name = "iter3"
+path = "exercises/iterators/iter3/main_test.go"
+mode = "test"
+hint = """
+Range the pairs and yield only the value, producing an iter.Seq[V]:
+
+for _, v := range seq { if !yield(v) { return } }
+"""
+
+[[exercises]]
+name = "iter4"
+path = "exercises/iterators/iter4/main_test.go"
+mode = "test"
+hint = """
+Pull b once, outside the loop, then take a single value per outer element:
+
+next, stop := iter.Pull(b)
+defer stop()
+...
+y, ok := next()
+if !ok { break }
+"""
+
+# ── maps_package ──────────────────────────────────────────────────────────────
+[[exercises]]
+name = "mapspkg1"
+path = "exercises/maps_package/mapspkg1/main_test.go"
+mode = "test"
+hint = """
+Assigning a map shares it. Use maps.Clone for an independent copy (import "maps"):
+
+cp := maps.Clone(settings)
+"""
+
+[[exercises]]
+name = "mapspkg2"
+path = "exercises/maps_package/mapspkg2/main_test.go"
+mode = "test"
+hint = """
+Delete in one pass with maps.DeleteFunc (import "maps"):
+
+maps.DeleteFunc(m, func(k string, v int) bool { return v <= 0 })
+"""
+
+# ── structured_logging (slog) ─────────────────────────────────────────────────
+[[exercises]]
+name = "slog1"
+path = "exercises/structured_logging/slog1/main_test.go"
+mode = "test"
+hint = """
+The handler's Level filters records. Set it to slog.LevelInfo so Info appears:
+
+&slog.HandlerOptions{Level: slog.LevelInfo}
+"""
+
+[[exercises]]
+name = "slog2"
+path = "exercises/structured_logging/slog2/main_test.go"
+mode = "test"
+hint = """
+With() returns a NEW logger — assign it back:
+
+logger = logger.With("service", "api")
+"""
+
+[[exercises]]
+name = "slog3"
+path = "exercises/structured_logging/slog3/main_test.go"
+mode = "test"
+hint = """
+Implement Handle to record the message:
+
+*h.msgs = append(*h.msgs, r.Message)
+return nil
+"""
+
+# ── goroutine_safety ──────────────────────────────────────────────────────────
+[[exercises]]
+name = "safety1"
+path = "exercises/goroutine_safety/safety1/main_test.go"
+mode = "test"
+hint = """
+Add a sync.RWMutex field. Lock/Unlock around the write in Inc; RLock/RUnlock
+around the read in Value.
+"""
+
+[[exercises]]
+name = "safety2"
+path = "exercises/goroutine_safety/safety2/main_test.go"
+mode = "test"
+hint = """
+Replace the map field with a sync.Map. Set uses m.Store(name, id); Get uses
+v, ok := m.Load(name) then a v.(int) type assertion.
+"""
+
+[[exercises]]
+name = "safety3"
+path = "exercises/goroutine_safety/safety3/main_test.go"
+mode = "test"
+hint = """
+A receiver must not close a channel it does not own. The owner already closed ch
+once — delete the close(ch) inside the worker goroutine.
+"""
+
+# ── synctest ──────────────────────────────────────────────────────────────────
+[[exercises]]
+name = "synctest1"
+path = "exercises/synctest/synctest1/main_test.go"
+mode = "test"
+hint = """
+synctest.Wait() only works inside a bubble. Wrap the whole body in:
+
+synctest.Test(t, func(t *testing.T) { ... })
+"""
+
+[[exercises]]
+name = "synctest2"
+path = "exercises/synctest/synctest2/main_test.go"
+mode = "test"
+hint = """
+Virtual time only advances when every goroutine blocks. Block on the channel —
+add `<-done` — so the sleeper's virtual hour elapses.
+"""
+
+# ── http_server_advanced ──────────────────────────────────────────────────────
+[[exercises]]
+name = "httpadv1"
+path = "exercises/http_server_advanced/httpadv1/main_test.go"
+mode = "test"
+hint = """
+Wrap the handler with cross-origin protection:
+
+return http.NewCrossOriginProtection().Handler(h)
+"""
+
+[[exercises]]
+name = "httpadv2"
+path = "exercises/http_server_advanced/httpadv2/main_test.go"
+mode = "test"
+hint = """
+PathValue's argument must match a {wildcard} in the pattern exactly. Use
+r.PathValue("postID"), not "post_id".
+"""
+
+[[exercises]]
+name = "httpadv3"
+path = "exercises/http_server_advanced/httpadv3/main_test.go"
+mode = "test"
+hint = """
+Point the outbound request at the backend inside Rewrite:
+
+pr.SetURL(target)
+"""
+
+# ── unsafe_pkg ────────────────────────────────────────────────────────────────
+[[exercises]]
+name = "unsafe1"
+path = "exercises/unsafe_pkg/unsafe1/main_test.go"
+mode = "test"
+hint = """
+unsafe.Offsetof reports a field's byte offset:
+
+return unsafe.Offsetof(Record{}.C)
+"""
+
+[[exercises]]
+name = "unsafe2"
+path = "exercises/unsafe_pkg/unsafe2/main_test.go"
+mode = "test"
+hint = """
+Zero-copy []byte -> string shares the backing array:
+
+return unsafe.String(unsafe.SliceData(b), len(b))
+"""
+
+# ── profiling ─────────────────────────────────────────────────────────────────
+[[exercises]]
+name = "pprof1"
+path = "exercises/profiling/pprof1/main_test.go"
+mode = "test"
+hint = """
+The profile is only flushed on stop. Add it right after StartCPUProfile:
+
+defer pprof.StopCPUProfile()
+"""
+
+[[exercises]]
+name = "pprof2"
+path = "exercises/profiling/pprof2/main_test.go"
+mode = "test"
+hint = """
+Return the heap growth between the two snapshots:
+
+return after.HeapAlloc - before.HeapAlloc
+"""
+
+[[exercises]]
+name = "pprof3"
+path = "exercises/profiling/pprof3/main_test.go"
+mode = "test"
+hint = """
+The pprof handlers live on http.DefaultServeMux. Forward the prefix:
+
+mux.Handle("/debug/pprof/", http.DefaultServeMux)
+"""
+
+[[exercises]]
+name = "logingest1"
+path = "exercises/capstone/logingest1/event.go"
+mode = "test"
+pkg = true
+hint = """
+Wrap the sentinel with %w so errors.Is still matches, and name the field in the
+text so a human can read it:
+
+	return fmt.Errorf("%w: source is empty", ErrInvalidEvent)
+
+Use slices.Contains(Levels, e.Level) for the level check, and e.At.IsZero() for
+the timestamp — comparing time.Time with == also compares the monotonic clock
+reading and the location pointer.
+"""
+
+[[exercises]]
+name = "logingest2"
+path = "exercises/capstone/logingest2/store.go"
+mode = "test"
+pkg = true
+hint = """
+Validate before you take the lock — a rejected event never needs the map:
+
+	if err := e.Validate(); err != nil {
+		return err
+	}
+	s.mu.Lock()
+	defer s.mu.Unlock()
+
+Readers take s.mu.RLock() instead, so several can run at once. BySource must
+return slices.Clone(...) — handing back s.events[source] hands back the store's
+own backing array — and []Event{} rather than nil for an unknown source, so the
+stage-three JSON encoder emits [] instead of null.
+"""
+
+[[exercises]]
+name = "logingest3"
+path = "exercises/capstone/logingest3/server.go"
+mode = "test"
+pkg = true
+hint = """
+Register the routes in NewServer with Go 1.22 method-and-wildcard patterns:
+
+	s.mux.HandleFunc("POST /events", s.handleIngest)
+	s.mux.HandleFunc("GET /events/{source}", s.handleBySource)
+
+The method in the pattern is what makes the mux answer DELETE with 405 on its
+own. In handleIngest, decode with json.NewDecoder(r.Body).Decode(&e), treat a
+decode failure as 400, and use errors.Is(err, ErrInvalidEvent) to turn a
+rejected event into 400 rather than 500; success is w.WriteHeader(201).
+In handleBySource, read the wildcard with r.PathValue("source").
+"""
+
+[[exercises]]
+name = "logingest4"
+path = "exercises/capstone/logingest4/pool.go"
+mode = "test"
+pkg = true
+hint = """
+Start the workers in NewPool and let each one range over the channel — the
+range ends by itself when the channel is closed:
+
+	for range workers {
+		p.wg.Go(func() {
+			for e := range p.events {
+				if err := p.store.Add(e); err != nil {
+					p.rejected.Add(1)
+				}
+			}
+		})
+	}
+
+Submit is p.events <- e. Close must do both halves, in this order:
+close(p.events) so the workers' range loops end, then p.wg.Wait() so Close does
+not return while events are still in flight. Rejected is p.rejected.Load().
+"""
+
+[[exercises]]
+name = "logingest5"
+path = "exercises/capstone/logingest5/shutdown.go"
+mode = "test"
+pkg = true
+hint = """
+Run srv.Serve(ln) in a goroutine reporting to a channel buffered by one, then
+select on that channel and on ctx.Done():
+
+	serveErr := make(chan error, 1)
+	go func() { serveErr <- srv.Serve(ln) }()
+
+	select {
+	case err := <-serveErr:
+		if errors.Is(err, http.ErrServerClosed) {
+			return nil
+		}
+		return err
+	case <-ctx.Done():
+		shutCtx, cancel := context.WithTimeout(context.Background(), grace)
+		defer cancel()
+		return srv.Shutdown(shutCtx)
+	}
+
+The shutdown context must derive from context.Background(), not from ctx — ctx
+is already cancelled there, so a context derived from it is born expired and
+Shutdown would cut off the in-flight requests you are trying to protect.
+"""
+
+[[exercises]]
+name = "logingest6"
+path = "exercises/capstone/logingest6/logging.go"
+mode = "test"
+pkg = true
+hint = """
+NewLogger is one line:
+
+	return slog.New(slog.NewJSONHandler(w, &slog.HandlerOptions{Level: level}))
+
+statusRecorder.WriteHeader must do both halves — record the code AND forward it,
+or the status is logged but never sent. WithLogging returns an http.HandlerFunc
+that wraps w:
+
+	rec := &statusRecorder{ResponseWriter: w, status: http.StatusOK}
+
+Start the recorder at 200, not 0: a handler that writes a body without calling
+WriteHeader still sends 200. Log once, after next.ServeHTTP returns, with
+log.Info("request", "method", ..., "path", ..., "status", ..., "duration", ...).
+"""
+
+[[exercises]]
+name = "logingest7"
+path = "exercises/capstone/logingest7/parse.go"
+mode = "test"
+pkg = true
+hint = """
+Use strings.SplitN, not strings.Split:
+
+	parts := strings.SplitN(line, LineSeparator, 3)
+	if len(parts) != 3 {
+		return Event{}, fmt.Errorf("%w: want 3 fields, got %d", ErrInvalidEvent, len(parts))
+	}
+
+n=3 caps the result at three parts, so separators inside the message survive,
+and the length check is what stops parts[2] from panicking on short input.
+Trim each field with strings.TrimSpace, stamp At from the `at` argument, then
+let e.Validate() decide — returning its error keeps errors.Is working.
+"""
+
+[[exercises]]
+name = "logingest8"
+path = "exercises/capstone/logingest8/profiling.go"
+mode = "test"
+pkg = true
+hint = """
+net/http/pprof registers itself on http.DefaultServeMux in init(), so a mux you
+own needs the handlers registered by hand:
+
+	mux.HandleFunc(PprofPrefix, pprof.Index)
+	mux.HandleFunc(PprofPrefix+"cmdline", pprof.Cmdline)
+	mux.HandleFunc(PprofPrefix+"profile", pprof.Profile)
+	mux.HandleFunc(PprofPrefix+"symbol", pprof.Symbol)
+	mux.HandleFunc(PprofPrefix+"trace", pprof.Trace)
+
+pprof.Index also serves the named profiles (/heap, /goroutine, /allocs), so
+those five cover everything. For NewService, mount the stage-three Server at
+"/" and register the profiles on the same mux — ServeMux prefers the longest
+matching pattern, so /debug/pprof/ beats the catch-all — then wrap the whole
+mux in WithLogging so profile requests get logged too.
+"""

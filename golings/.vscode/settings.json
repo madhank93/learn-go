@@ -1,0 +1,36 @@
+{
+	// Let the mise extension provide go / gopls / golangci-lint from mise.toml,
+	// so VS Code finds the pinned toolchain even when launched outside a mise shell.
+	"mise.configureExtensionsAutomatically": true,
+	"mise.enable": true,
+
+	// Point the Go extension straight at mise's shims so completion, hover, and
+	// go-to-definition work even if the mise extension isn't installed and VS Code
+	// was launched without the mise PATH (GUI launch). The shims resolve the
+	// version pinned in mise.toml. ~ is expanded by the Go extension.
+	"go.alternateTools": {
+		"go": "/Users/madhan/.local/share/mise/shims/go",
+		"gopls": "/Users/madhan/.local/share/mise/shims/gopls",
+		"golangci-lint": "~/.local/share/mise/shims/golangci-lint"
+	},
+
+	// Go extension: use gopls for completion/hover/navigation and lint on save.
+	"go.useLanguageServer": true,
+	"go.toolsManagement.checkForUpdates": "off",
+	"go.lintTool": "golangci-lint",
+	"go.lintOnSave": "package",
+	"gopls": {
+		"ui.completion.usePlaceholders": true
+	},
+	"[go]": {
+		"editor.formatOnSave": true,
+		"editor.defaultFormatter": "golang.go",
+		"editor.codeActionsOnSave": {
+			"source.organizeImports": "explicit"
+		}
+	},
+	"debug.javascript.defaultRuntimeExecutable": {
+		"pwa-node": "/Users/madhan/.local/share/mise/shims/node"
+	},
+	"python.defaultInterpreterPath": "/Users/madhan/.local/share/mise/installs/python/3.13.7/bin/python"
+}

@@ -1,0 +1,924 @@
+diff --git a/exercises/arrays/arrays1/main.go b/exercises/arrays/arrays1/main.go
+index 56dc086..736f117 100644
+--- a/exercises/arrays/arrays1/main.go
++++ b/exercises/arrays/arrays1/main.go
+@@ -3,7 +3,6 @@
+ //
+ // Arrays are zero-indexed — fix the out-of-range access.
+ 
+-// I AM NOT DONE
+ package main
+ 
+ import "fmt"
+@@ -15,6 +14,6 @@ func main() {
+ 	colors[1] = "green"
+ 	colors[2] = "blue"
+ 
+-	fmt.Printf("First color is %s\n", colors[])
+-	fmt.Printf("Last color is %s\n", colors[])
++	fmt.Printf("First color is %s\n", colors[0])
++	fmt.Printf("Last color is %s\n", colors[2])
+ }
+diff --git a/exercises/arrays/arrays2/main.go b/exercises/arrays/arrays2/main.go
+index 24512e8..cb1e1dd 100644
+--- a/exercises/arrays/arrays2/main.go
++++ b/exercises/arrays/arrays2/main.go
+@@ -3,12 +3,11 @@
+ //
+ // An array can't mix types; every element shares one type.
+ 
+-// I AM NOT DONE
+ package main
+ 
+ import "fmt"
+ 
+ func main() {
+-	names := [4]string{"John", "Maria", "Carl", 10}
++	names := [4]string{"John", "Maria", "Carl", "10"}
+ 	fmt.Println(names)
+ }
+diff --git a/exercises/functions/functions1/main.go b/exercises/functions/functions1/main.go
+index 67a54c4..4987330 100644
+--- a/exercises/functions/functions1/main.go
++++ b/exercises/functions/functions1/main.go
+@@ -3,9 +3,10 @@
+ //
+ // Define the function that main calls.
+ 
+-// I AM NOT DONE
+ package main
+ 
++func call_me() {}
++
+ func main() {
+ 	call_me()
+ }
+diff --git a/exercises/functions/functions2/main.go b/exercises/functions/functions2/main.go
+index aaa2568..691a06c 100644
+--- a/exercises/functions/functions2/main.go
++++ b/exercises/functions/functions2/main.go
+@@ -3,7 +3,6 @@
+ //
+ // Function parameters must declare their types.
+ 
+-// I AM NOT DONE
+ package main
+ 
+ import "fmt"
+@@ -12,7 +11,7 @@ func main() {
+ 	callMe(10)
+ }
+ 
+-func callMe(num) {
++func callMe(num int) {
+ 	for n := 0; n <= num; n++ {
+ 		fmt.Printf("Num is %d\n", n)
+ 	}
+diff --git a/exercises/functions/functions3/main.go b/exercises/functions/functions3/main.go
+index 7db3f6c..42b23f0 100644
+--- a/exercises/functions/functions3/main.go
++++ b/exercises/functions/functions3/main.go
+@@ -3,13 +3,12 @@
+ //
+ // Call a function with the argument it expects.
+ 
+-// I AM NOT DONE
+ package main
+ 
+ import "fmt"
+ 
+ func main() {
+-	call_me()
++	call_me(10)
+ }
+ 
+ func call_me(num int) {
+diff --git a/exercises/functions/functions4/main.go b/exercises/functions/functions4/main.go
+index e74743b..86af38e 100644
+--- a/exercises/functions/functions4/main.go
++++ b/exercises/functions/functions4/main.go
+@@ -2,8 +2,6 @@
+ // Make me compile!
+ //
+ // A function returning a value must declare its return type.
+-
+-// I AM NOT DONE
+ package main
+ 
+ import "fmt"
+@@ -12,6 +10,6 @@ func main() {
+ 	fmt.Println("1 + 2 is: ", addNumbers(1, 2)) // don't change this line
+ }
+ 
+-func addNumbers(a int, b int) {
++func addNumbers(a int, b int) int {
+ 	return a + b
+ }
+diff --git a/exercises/if/if1/main_test.go b/exercises/if/if1/main_test.go
+index 9b598c6..02875e0 100644
+--- a/exercises/if/if1/main_test.go
++++ b/exercises/if/if1/main_test.go
+@@ -3,7 +3,6 @@
+ //
+ // Return the larger of two numbers using if.
+ 
+-// I AM NOT DONE
+ package main_test
+ 
+ import "testing"
+@@ -11,7 +10,12 @@ import "testing"
+ func bigger(a int, b int) int {
+ 	// Complete this function to return the bigger number
+ 	// Use only if statements
+-	return 0
++
++	if a > b {
++		return a
++	}
++
++	return b
+ }
+ 
+ func TestTwoIsBiggerThanOne(t *testing.T) {
+diff --git a/exercises/if/if2/main_test.go b/exercises/if/if2/main_test.go
+index ee2b557..13a519e 100644
+--- a/exercises/if/if2/main_test.go
++++ b/exercises/if/if2/main_test.go
+@@ -3,7 +3,6 @@
+ //
+ // Map each input string to an output with if/else.
+ 
+-// I AM NOT DONE
+ package main_test
+ 
+ import "testing"
+@@ -14,8 +13,10 @@ func fooIfFizz(fizzish string) string {
+ 	// When the input is neither fizz or fuzz return baz
+ 	if fizzish == "fizz" {
+ 		return "foo"
++	} else if fizzish == "fuzz" {
++		return "bar"
+ 	} else {
+-		return "complete me"
++		return "baz"
+ 	}
+ }
+ 
+diff --git a/exercises/maps/maps1/main.go b/exercises/maps/maps1/main.go
+index 0d5b1d8..e21169b 100644
+--- a/exercises/maps/maps1/main.go
++++ b/exercises/maps/maps1/main.go
+@@ -2,19 +2,16 @@
+ // Make me compile!
+ //
+ // Declare a map's key and value types.
+-//
+-// I AM NOT DONE
+-//
+ package main
+ 
+ import "fmt"
+ 
+ func main() {
+ 	// Map with people names and their ages
+-	m := make(map)
++	m := make(map[string]int)
+ 
+ 	m["John"] = 30
+ 	m["Ana"] = 21
+ 
+-	fmt.Printf("John is %d and Ana is %d", m[], m[])
++	fmt.Printf("John is %d and Ana is %d", m["John"], m["Ana"])
+ }
+diff --git a/exercises/maps/maps2/main.go b/exercises/maps/maps2/main.go
+index f45a31d..8270a2f 100644
+--- a/exercises/maps/maps2/main.go
++++ b/exercises/maps/maps2/main.go
+@@ -2,13 +2,11 @@
+ // Make me compile!
+ //
+ // Initialize a map with a literal.
+-//
+-// I AM NOT DONE
+ package main
+ 
+ import "fmt"
+ 
+ func main() {
+-	m := map{}
++	m := map[string]int{"John": 30, "Ana": 22}
+ 	fmt.Printf("John is %d and Ana is %d", m["John"], m["Ana"])
+ }
+diff --git a/exercises/maps/maps3/main_test.go b/exercises/maps/maps3/main_test.go
+index a517f78..b01906d 100644
+--- a/exercises/maps/maps3/main_test.go
++++ b/exercises/maps/maps3/main_test.go
+@@ -2,8 +2,6 @@
+ // Make me compile!
+ //
+ // Look up the correct key in a map.
+-//
+-// I AM NOT DONE
+ package main
+ 
+ import "testing"
+@@ -14,7 +12,7 @@ func TestGetPhone(t *testing.T) {
+ 		"John": "+01 333 666",
+ 	}
+ 
+-	phone, _ := phoneBook["Anna"] // something seems wrong here
++	phone := phoneBook["Ana"] // something seems wrong here
+ 	expectedPhone := "+01 101 102"
+ 	if phone != expectedPhone {
+ 		t.Errorf("phone should be %s but got %s", expectedPhone, phone)
+@@ -23,11 +21,12 @@ func TestGetPhone(t *testing.T) {
+ 
+ func TestInsertPhone(t *testing.T) {
+ 	phoneBook := map[string]string{
+-		"Ana":  "+01 101 102",
+-		"John": "+01 333 666",
++		"Ana":   "+01 101 102",
++		"John":  "+01 333 666",
++		"Laura": "+11 99 98 97",
+ 	}
+ 
+-	phone, _ := phoneBook["Laura"] // don't change this line
++	phone := phoneBook["Laura"] // don't change this line
+ 	expectedPhone := "+11 99 98 97"
+ 	if phone != expectedPhone {
+ 		t.Errorf("phone should be %s but got %s", expectedPhone, phone)
+@@ -40,6 +39,8 @@ func TestDeletePhone(t *testing.T) {
+ 		"John": "+01 333 666",
+ 	} // don't change the original map
+ 
++	delete(phoneBook, "Ana")
++
+ 	totalPhones := len(phoneBook)
+ 	expectedTotalPhones := 1
+ 	if totalPhones != expectedTotalPhones {
+diff --git a/exercises/more_functions/morefn1/main_test.go b/exercises/more_functions/morefn1/main_test.go
+index 6e8f46f..b873921 100644
+--- a/exercises/more_functions/morefn1/main_test.go
++++ b/exercises/more_functions/morefn1/main_test.go
+@@ -2,7 +2,6 @@
+ // A function may call itself. Every recursion needs a base case to stop.
+ // Implement factorial recursively.
+ 
+-// I AM NOT DONE
+ package main_test
+ 
+ import "testing"
+@@ -10,7 +9,11 @@ import "testing"
+ // factorial returns n! (with 0! == 1).
+ func factorial(n int) int {
+ 	// FIXME: base case n<=1 returns 1; otherwise recurse on n-1.
+-	return 0
++	if n <= 1 {
++		return 1
++	} else {
++		return n * factorial(n-1)
++	}
+ }
+ 
+ func TestFactorial(t *testing.T) {
+diff --git a/exercises/more_functions/morefn2/main_test.go b/exercises/more_functions/morefn2/main_test.go
+index 1e54208..0061de1 100644
+--- a/exercises/more_functions/morefn2/main_test.go
++++ b/exercises/more_functions/morefn2/main_test.go
+@@ -2,7 +2,6 @@
+ // A variadic parameter (nums ...int) accepts any number of arguments and is
+ // seen inside the function as a slice. A slice can be spread with slice... .
+ 
+-// I AM NOT DONE
+ package main_test
+ 
+ import "testing"
+@@ -11,6 +10,9 @@ import "testing"
+ func sum(nums ...int) int {
+ 	total := 0
+ 	// FIXME: range the variadic slice, adding each value.
++	for i := 0; i < len(nums); i++ {
++		total = total + nums[i]
++	}
+ 	return total
+ }
+ 
+diff --git a/exercises/pointers/pointers1/main_test.go b/exercises/pointers/pointers1/main_test.go
+index 83a607e..d80cf10 100644
+--- a/exercises/pointers/pointers1/main_test.go
++++ b/exercises/pointers/pointers1/main_test.go
+@@ -2,7 +2,6 @@
+ // A pointer holds the address of a value. &x takes the address; *p reads or
+ // writes the value at that address. Modify the caller's int through a pointer.
+ 
+-// I AM NOT DONE
+ package main_test
+ 
+ import "testing"
+@@ -10,6 +9,7 @@ import "testing"
+ // double multiplies the value that p points to by 2, in place.
+ func double(p *int) {
+ 	// FIXME: write through the pointer to change the caller's value.
++	*p = *p * 2
+ }
+ 
+ func TestDouble(t *testing.T) {
+diff --git a/exercises/primitive_types/primitive_types1/main.go b/exercises/primitive_types/primitive_types1/main.go
+index c5e6a3c..1ad3da3 100644
+--- a/exercises/primitive_types/primitive_types1/main.go
++++ b/exercises/primitive_types/primitive_types1/main.go
+@@ -1,9 +1,6 @@
+ // primitive_types1
+ // Make me compile!
+-//
+-// Toggle a boolean before the second check.
+ 
+-// I AM NOT DONE
+ package main
+ 
+ import "fmt"
+@@ -14,7 +11,7 @@ func main() {
+ 		fmt.Println("The store is open, let's buy some clothes!")
+ 	}
+ 
+-	storeIsOpen
++	storeIsOpen = false
+ 	if !storeIsOpen {
+ 		fmt.Println("Oh no, let's buy some clothes online!")
+ 	}
+diff --git a/exercises/primitive_types/primitive_types2/main.go b/exercises/primitive_types/primitive_types2/main.go
+index 71703f6..fa54012 100644
+--- a/exercises/primitive_types/primitive_types2/main.go
++++ b/exercises/primitive_types/primitive_types2/main.go
+@@ -3,11 +3,11 @@
+ //
+ // Declare the string before formatting it.
+ 
+-// I AM NOT DONE
+ package main
+ 
+ import "fmt"
+ 
+ func main() {
++	who := "Madhan"
+ 	fmt.Printf("Hello, %s\n", who) // '%s' is used to format strings
+ }
+diff --git a/exercises/primitive_types/primitive_types3/main.go b/exercises/primitive_types/primitive_types3/main.go
+index 0bef068..e2358b0 100644
+--- a/exercises/primitive_types/primitive_types3/main.go
++++ b/exercises/primitive_types/primitive_types3/main.go
+@@ -3,12 +3,14 @@
+ //
+ // Declare the variables passed to Printf.
+ 
+-// I AM NOT DONE
+ package main
+ 
+ import "fmt"
+ 
+ func main() {
+ 
++	who := "madhan"
++	country := "USA"
++
+ 	fmt.Printf("Hello, I am %s and live in %s\n", who, country)
+ }
+diff --git a/exercises/primitive_types/primitive_types4/main.go b/exercises/primitive_types/primitive_types4/main.go
+index 404081c..ad60a31 100644
+--- a/exercises/primitive_types/primitive_types4/main.go
++++ b/exercises/primitive_types/primitive_types4/main.go
+@@ -3,7 +3,6 @@
+ //
+ // Store a character in a byte value.
+ 
+-// I AM NOT DONE
+ package main
+ 
+ import "fmt"
+@@ -12,6 +11,6 @@ func main() {
+ 	var b1 byte = 110
+ 	fmt.Println("byte value for b1:", b1)
+ 
+-	var b2 byte = ''
++	var b2 byte = '1'
+ 	fmt.Println("representation for b2:", b2)
+ }
+diff --git a/exercises/primitive_types/primitive_types5/main.go b/exercises/primitive_types/primitive_types5/main.go
+index e2da5ef..f718fc4 100644
+--- a/exercises/primitive_types/primitive_types5/main.go
++++ b/exercises/primitive_types/primitive_types5/main.go
+@@ -3,19 +3,18 @@
+ //
+ // Use Go's real numeric type names.
+ 
+-// I AM NOT DONE
+ package main
+ 
+ import "fmt"
+ 
+ func main() {
+-	var n1 integer = 101
++	var n1 int = 101
+ 	if n1 > 100 {
+ 		fmt.Println("It is a big number")
+ 	} else {
+ 		fmt.Println("Not a big number at all")
+ 	}
+ 
+-	var n2 float = 0.99
++	var n2 float32 = 0.99
+ 	fmt.Println(n2)
+ }
+diff --git a/exercises/range/range1/main.go b/exercises/range/range1/main.go
+index 8e5ac6f..deb3930 100644
+--- a/exercises/range/range1/main.go
++++ b/exercises/range/range1/main.go
+@@ -2,8 +2,6 @@
+ // Make me compile!
+ //
+ // Iterate a slice with range.
+-//
+-// I AM NOT DONE
+ package main
+ 
+ import "fmt"
+@@ -11,7 +9,7 @@ import "fmt"
+ func main() {
+ 	evenNumbers := []int{2, 4, 6, 8, 10}
+ 
+-	for _, v := {
++	for _, v := range evenNumbers {
+ 		fmt.Printf("%d is even\n", v)
+ 	}
+ }
+diff --git a/exercises/range/range2/main.go b/exercises/range/range2/main.go
+index 77e0294..bfb03ea 100644
+--- a/exercises/range/range2/main.go
++++ b/exercises/range/range2/main.go
+@@ -2,8 +2,6 @@
+ // Make me compile!
+ //
+ // Iterate a map's keys and values with range.
+-//
+-// I AM NOT DONE
+ package main
+ 
+ import "fmt"
+@@ -14,7 +12,7 @@ func main() {
+ 		"John": "+01 333 666",
+ 	}
+ 
+-	for := range {
++	for name, phone := range phoneBook {
+ 		fmt.Printf("%s has the %s phone\n", name, phone)
+ 	}
+ }
+diff --git a/exercises/range/range3/main_test.go b/exercises/range/range3/main_test.go
+index 0d1bf85..9b11c60 100644
+--- a/exercises/range/range3/main_test.go
++++ b/exercises/range/range3/main_test.go
+@@ -2,8 +2,6 @@
+ // Make me compile!
+ //
+ // Use range to collect the even numbers.
+-//
+-// I AM NOT DONE
+ package main_test
+ 
+ import (
+@@ -16,7 +14,10 @@ func TestFilterEvenNumbers(t *testing.T) {
+ 
+ 	evenNumbers := []int{} // use range to filter even numbers
+ 
+-	for range numbers {
++	for _, v := range numbers {
++		if v%2 == 0 {
++			evenNumbers = append(evenNumbers, v)
++		}
+ 	}
+ 
+ 	if !reflect.DeepEqual(evenNumbers, []int{2, 4, 6, 8, 10}) {
+diff --git a/exercises/slices/slices1/main.go b/exercises/slices/slices1/main.go
+index 2c5a4a0..1bff7d9 100644
+--- a/exercises/slices/slices1/main.go
++++ b/exercises/slices/slices1/main.go
+@@ -3,13 +3,12 @@
+ //
+ // Create a slice with make, giving its element type.
+ 
+-// I AM NOT DONE
+ package main
+ 
+ import "fmt"
+ 
+ func main() {
+-	a := make(, 3, 10) // play with length and capacity
++	a := make([]int, 3, 10) // play with length and capacity
+ 	fmt.Println("length of 'a':", len(a))
+ 	fmt.Println("capacity of 'a':", cap(a))
+ }
+diff --git a/exercises/slices/slices2/main.go b/exercises/slices/slices2/main.go
+index 27ee2fc..cd2a75f 100644
+--- a/exercises/slices/slices2/main.go
++++ b/exercises/slices/slices2/main.go
+@@ -3,13 +3,12 @@
+ //
+ // Take a sub-slice using [low:high] bounds.
+ 
+-// I AM NOT DONE
+ package main
+ 
+ import "fmt"
+ 
+ func main() {
+ 	names := [4]string{"John", "Maria", "Carl", "Peter"}
+-	lastTwoNames := names[] // after figuring out the answer, try with other low/high bounds
++	lastTwoNames := names[2:] // after figuring out the answer, try with other low/high bounds
+ 	fmt.Println(lastTwoNames)
+ }
+diff --git a/exercises/slices/slices3/main.go b/exercises/slices/slices3/main.go
+index f64e345..596216e 100644
+--- a/exercises/slices/slices3/main.go
++++ b/exercises/slices/slices3/main.go
+@@ -3,13 +3,12 @@
+ //
+ // Add elements to a slice with append.
+ 
+-// I AM NOT DONE
+ package main
+ 
+ import "fmt"
+ 
+ func main() {
+ 	names := []string{"John", "Maria", "Carl", "Peter"}
+-	names = append()
++	names = append(names, "Ken")
+ 	fmt.Println(names)
+ }
+diff --git a/exercises/slices/slices4/main_test.go b/exercises/slices/slices4/main_test.go
+index 0c9ef9f..4201f40 100644
+--- a/exercises/slices/slices4/main_test.go
++++ b/exercises/slices/slices4/main_test.go
+@@ -3,7 +3,6 @@
+ //
+ // Index a slice within its bounds.
+ 
+-// I AM NOT DONE
+ package main_test
+ 
+ import (
+@@ -13,7 +12,7 @@ import (
+ 
+ func TestGetOnlyFirstName(t *testing.T) {
+ 	names := []string{"John", "Maria", "Carl", "Peter"}
+-	firstName := names[3]
++	firstName := names[0]
+ 
+ 	if firstName != "John" {
+ 		t.Errorf("firstName value must be John")
+@@ -22,7 +21,7 @@ func TestGetOnlyFirstName(t *testing.T) {
+ 
+ func TestGetFirstTwoNames(t *testing.T) {
+ 	names := []string{"John", "Maria", "Carl", "Peter"}
+-	firstTwoNames := names[5:10]
++	firstTwoNames := names[0:2]
+ 	expectedFirstTwoNames := []string{"John", "Maria"}
+ 
+ 	if !reflect.DeepEqual(firstTwoNames, expectedFirstTwoNames) {
+@@ -32,7 +31,7 @@ func TestGetFirstTwoNames(t *testing.T) {
+ 
+ func TestGetLastTwoNames(t *testing.T) {
+ 	names := []string{"John", "Maria", "Carl", "Peter"}
+-	lastTwoNames := names[5:10]
++	lastTwoNames := names[2:]
+ 	expectedLastTwoNames := []string{"Carl", "Peter"}
+ 
+ 	if !reflect.DeepEqual(lastTwoNames, expectedLastTwoNames) {
+diff --git a/exercises/strings/strings1/main_test.go b/exercises/strings/strings1/main_test.go
+index 2c597f1..fee225f 100644
+--- a/exercises/strings/strings1/main_test.go
++++ b/exercises/strings/strings1/main_test.go
+@@ -1,15 +1,17 @@
+ // strings1
+ // The strings package holds the everyday string utilities.
+ 
+-// I AM NOT DONE
+ package main_test
+ 
+-import "testing"
++import (
++	"strings"
++	"testing"
++)
+ 
+ // slugify lowercases s and replaces every space with a hyphen.
+ func slugify(s string) string {
+ 	// FIXME: lowercase the input, then replace spaces with hyphens (strings package).
+-	return s
++	return strings.ReplaceAll(strings.ToLower(s), " ", "-")
+ }
+ 
+ func TestSlugify(t *testing.T) {
+diff --git a/exercises/strings/strings2/main_test.go b/exercises/strings/strings2/main_test.go
+index 7f0780a..549fa18 100644
+--- a/exercises/strings/strings2/main_test.go
++++ b/exercises/strings/strings2/main_test.go
+@@ -2,15 +2,18 @@
+ // A Go string is bytes, not characters. len(s) counts BYTES; one multibyte
+ // UTF-8 character (like é or 世) is several bytes. Count runes instead.
+ 
+-// I AM NOT DONE
+ package main_test
+ 
+-import "testing"
++import (
++	"testing"
++	"unicode/utf8"
++)
+ 
+ // charCount returns the number of characters (runes) in s, not bytes.
+ func charCount(s string) int {
+ 	// FIXME: count runes, not bytes — unicode/utf8 has a helper for that.
+-	return len(s)
++	count := utf8.RuneCountInString(s)
++	return count
+ }
+ 
+ func TestCharCount(t *testing.T) {
+diff --git a/exercises/structs/structs1/main.go b/exercises/structs/structs1/main.go
+index 25503e9..924984c 100644
+--- a/exercises/structs/structs1/main.go
++++ b/exercises/structs/structs1/main.go
+@@ -2,15 +2,18 @@
+ // Make me compile!
+ //
+ // Define the struct's fields.
+-//
+-// I AM NOT DONE
+ package main
+ 
+ import "fmt"
+ 
+ type Person struct {
++	name string
++	age  int
+ }
+ 
+ func main() {
++
++	person := Person{"David", 32}
++
+ 	fmt.Printf("Person %s and age %d", person.name, person.age)
+ }
+diff --git a/exercises/structs/structs2/main.go b/exercises/structs/structs2/main.go
+index 47e02e0..0cd2f5b 100644
+--- a/exercises/structs/structs2/main.go
++++ b/exercises/structs/structs2/main.go
+@@ -2,20 +2,25 @@
+ // Make me compile!
+ //
+ // Embed a struct instead of adding a plain field.
+-//
+-// I AM NOT DONE
+ package main
+ 
+-import "fmt"
++import (
++	"fmt"
++)
++
++type ContactDetails struct {
++	phone string
++}
+ 
+ type Person struct {
+ 	// don't just create the phone field here. embed a new struct
+ 	name string
+ 	age  int
++	ContactDetails
+ }
+ 
+ func main() {
+-	// contactDetails := ContactDetails{}
+-	person := Person{name: "John", age: 32}
++	contactDetails := ContactDetails{phone: "+1 234 567 890"}
++	person := Person{name: "John", age: 32, ContactDetails: contactDetails}
+ 	fmt.Printf("%s is %d years old and his phone is %s\n", person.name, person.age, person.phone)
+ }
+diff --git a/exercises/structs/structs3/main.go b/exercises/structs/structs3/main.go
+index 4ab3f7a..6f2480d 100644
+--- a/exercises/structs/structs3/main.go
++++ b/exercises/structs/structs3/main.go
+@@ -2,8 +2,6 @@
+ // Make me compile!
+ //
+ // Attach a method to a struct.
+-//
+-// I AM NOT DONE
+ package main
+ 
+ import "fmt"
+@@ -13,6 +11,10 @@ type Person struct {
+ 	lastName  string
+ }
+ 
++func (p Person) FullName() string {
++	return fmt.Sprintf("%s %s", p.firstName, p.lastName)
++}
++
+ func main() {
+ 	person := Person{firstName: "Maurício", lastName: "Antunes"}
+ 	fmt.Printf("Person full name is: %s\n", person.FullName()) // here it must output Person full name is: Maurício Antunes
+diff --git a/exercises/switch/switch1/main.go b/exercises/switch/switch1/main.go
+index b6e054a..2298e54 100644
+--- a/exercises/switch/switch1/main.go
++++ b/exercises/switch/switch1/main.go
+@@ -3,14 +3,13 @@
+ //
+ // Switch on a variable instead of bare values.
+ 
+-// I AM NOT DONE
+ package main
+ 
+ import "fmt"
+ 
+ func main() {
+ 	status := "open"
+-	switch {
++	switch status {
+ 	case "open":
+ 		fmt.Println("status is open")
+ 	case "closed":
+diff --git a/exercises/switch/switch2/main.go b/exercises/switch/switch2/main.go
+index a069f88..db87b29 100644
+--- a/exercises/switch/switch2/main.go
++++ b/exercises/switch/switch2/main.go
+@@ -3,7 +3,6 @@
+ //
+ // A conditionless switch needs a boolean case or default.
+ 
+-// I AM NOT DONE
+ package main
+ 
+ import "fmt"
+@@ -12,7 +11,7 @@ func main() {
+ 	switch {
+ 	case 0 > 1:
+ 		fmt.Println("zero is greater than one")
+-	case:
++	default:
+ 		fmt.Println("one is greater than zero")
+ 	}
+ }
+diff --git a/exercises/switch/switch3/main_test.go b/exercises/switch/switch3/main_test.go
+index 47c4ae9..d80fd5b 100644
+--- a/exercises/switch/switch3/main_test.go
++++ b/exercises/switch/switch3/main_test.go
+@@ -3,7 +3,6 @@
+ //
+ // Return a weekday name for a number using a switch.
+ 
+-// I AM NOT DONE
+ package main_test
+ 
+ import "testing"
+@@ -11,7 +10,25 @@ import "testing"
+ func weekDay(day int) string {
+ 	// Return the day of the week based on the
+ 	// integer. Use a switch case to satisfy all test cases below
+-	return "Sunday"
++	switch day {
++	case 0:
++		return "Sunday"
++	case 1:
++		return "Monday"
++	case 2:
++		return "Tuesday"
++	case 3:
++		return "Wednesday"
++	case 4:
++		return "Thursday"
++	case 5:
++		return "Friday"
++	case 6:
++		return "Saturday"
++	default:
++		return "Unkown"
++	}
++
+ }
+ 
+ func TestWeekDay(t *testing.T) {
+diff --git a/exercises/variables/variables1/main.go b/exercises/variables/variables1/main.go
+index f741d76..cef8663 100644
+--- a/exercises/variables/variables1/main.go
++++ b/exercises/variables/variables1/main.go
+@@ -3,12 +3,11 @@
+ //
+ // Give the variable a name so it can be declared.
+ 
+-// I AM NOT DONE
+ package main
+ 
+ import "fmt"
+ 
+ func main() {
+-	var = 5
++	var x = 5
+ 	fmt.Printf("x has the value %d", x)
+ }
+diff --git a/exercises/variables/variables2/main.go b/exercises/variables/variables2/main.go
+index 1f926f4..2ea658e 100644
+--- a/exercises/variables/variables2/main.go
++++ b/exercises/variables/variables2/main.go
+@@ -3,12 +3,11 @@
+ //
+ // Declare a variable before assigning to it.
+ 
+-// I AM NOT DONE
+ package main
+ 
+ import "fmt"
+ 
+ func main() {
+-	x = 5
++	const x = 5
+ 	fmt.Printf("x has the value %d", x)
+ }
+diff --git a/exercises/variables/variables3/main.go b/exercises/variables/variables3/main.go
+index 55f4c4e..eaffbc1 100644
+--- a/exercises/variables/variables3/main.go
++++ b/exercises/variables/variables3/main.go
+@@ -3,12 +3,11 @@
+ //
+ // A variable declaration needs a type or an initial value.
+ 
+-// I AM NOT DONE
+ package main
+ 
+ import "fmt"
+ 
+ func main() {
+-	var x
++	var x = 5
+ 	fmt.Printf("x has the value %d", x)
+ }
+diff --git a/exercises/variables/variables4/main.go b/exercises/variables/variables4/main.go
+index 1832813..4098e10 100644
+--- a/exercises/variables/variables4/main.go
++++ b/exercises/variables/variables4/main.go
+@@ -3,7 +3,6 @@
+ //
+ // See what happens when a block reuses a name with a new type.
+ 
+-// I AM NOT DONE
+ package main
+ 
+ import "fmt"
+@@ -13,7 +12,7 @@ func main() {
+ 	fmt.Printf("x has the value %s\n", x)
+ 
+ 	if true {
+-		x = 1
++		x := 1
+ 		fmt.Println(x + 1)
+ 	}
+ 
+diff --git a/exercises/variables/variables5/main.go b/exercises/variables/variables5/main.go
+index 6272366..930ad97 100644
+--- a/exercises/variables/variables5/main.go
++++ b/exercises/variables/variables5/main.go
+@@ -3,12 +3,11 @@
+ //
+ // Constants must be given a value when declared.
+ 
+-// I AM NOT DONE
+ package main
+ 
+ import "fmt"
+ 
+-const Pi
++const Pi = 3.14
+ 
+ func main() {
+ 	fmt.Println(Pi)
+diff --git a/exercises/variables/variables6/main.go b/exercises/variables/variables6/main.go
+index 6ae58c0..b9ec962 100644
+--- a/exercises/variables/variables6/main.go
++++ b/exercises/variables/variables6/main.go
+@@ -3,7 +3,6 @@
+ //
+ // Constants cannot be reassigned after declaration.
+ 
+-// I AM NOT DONE
+ package main
+ 
+ import "fmt"
+@@ -13,6 +12,6 @@ const x = 10
+ func main() {
+ 	fmt.Println(x)
+ 
+-	x = x + 1
++	x := x + 1
+ 	fmt.Println(x)
+ }
